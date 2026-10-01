@@ -1,0 +1,15 @@
+{
+  "profile":{"id":"gyuyeon","name":"gyuyeon","job_title":"Designer","email":"julie0juu@gmail.com","bio":"안녕하세요, 디자이너 gyuyeon입니다. 작은 디테일에서 시작해 즐겁고 명확한 경험을 만들어 갑니다. 이 소개는 실제 자기소개로 교체할 수 있는 임시 문구입니다.","avatar_url":"character.png","skills":["UI / UX Design","Visual Design","Web Design"],"tools":["Figma","Photoshop","Illustrator"]},
+  "projects":[
+    {"id":"sample-web","slug":"sample-web-redesign","category":"web","title":"Studio Archive","summary":"콘텐츠가 중심이 되는 크리에이티브 스튜디오 웹사이트","thumbnail_url":"sample-web.svg","cover_url":"sample-web.svg","overview":"스튜디오의 작업과 이야기를 명확한 탐색 구조로 전달하는 웹사이트 리디자인 샘플입니다. 실제 고객 프로젝트가 아닌 교체용 데모 콘텐츠입니다.","design_concept":"큰 타이포그래피와 절제된 색상으로 콘텐츠에 집중합니다. 프로젝트를 빠르게 훑어볼 수 있는 카드 구조와 명확한 정보 위계를 제안합니다.","period":"샘플 · 기간 입력 예정","role":"샘플 · 기획 / UI 디자인","tools":["Figma"],"year":"SAMPLE","sort_order":1,"is_published":true},
+    {"id":"sample-detail","slug":"sample-product-detail","category":"detail","title":"Everyday Objects","summary":"일상 속 오브제의 가치를 전하는 상품 상세페이지","thumbnail_url":"sample-detail.svg","cover_url":"sample-detail.svg","overview":"제품의 특징, 소재, 사용 경험을 차례대로 소개하는 상세페이지 샘플입니다. 실제 제품 사진과 정보로 교체할 수 있습니다.","design_concept":"제품 설명의 순서와 여백을 통해 구매자가 필요한 정보를 쉽게 찾도록 구성합니다. 원본 비율을 유지한 이미지와 간결한 정보를 함께 배치합니다.","period":"샘플 · 기간 입력 예정","role":"샘플 · 비주얼 / 상세페이지 디자인","tools":["Photoshop","Figma"],"year":"SAMPLE","sort_order":2,"is_published":true},
+    {"id":"sample-banner","slug":"sample-banner-collection","category":"banner","title":"A Fresh Perspective","summary":"선명한 메시지와 타이포그래피로 구성한 캠페인 배너","thumbnail_url":"sample-banner.svg","cover_url":"sample-banner.svg","overview":"메시지 전달과 시각적 주목도를 연습한 캠페인 배너 샘플입니다. 실제 캠페인 이미지와 설명으로 교체할 수 있습니다.","design_concept":"대담한 타이포그래피와 색상 대비를 활용합니다. 작은 화면에서도 주요 메시지와 행동 유도 문구가 명확히 읽히도록 설계합니다.","period":"샘플 · 기간 입력 예정","role":"샘플 · 그래픽 디자인","tools":["Illustrator","Photoshop"],"year":"SAMPLE","sort_order":3,"is_published":true},
+    {"id":"sample-app","slug":"sample-app-design","category":"app","title":"Little Routine","summary":"작은 일상의 습관을 기록하는 모바일 앱 디자인","thumbnail_url":"sample-app.svg","cover_url":"sample-app.svg","overview":"오늘의 작은 목표를 기록하고 달성하는 모바일 앱 디자인 샘플입니다. 실제 앱 프로젝트를 위한 교체 가능한 예시입니다.","design_concept":"오늘 해야 할 행동에 집중하는 간결한 화면과 명확한 상태 피드백을 제안합니다. 편안한 색상과 충분한 터치 영역으로 꾸준한 사용을 돕습니다.","period":"샘플 · 기간 입력 예정","role":"샘플 · UX 기획 / UI 디자인","tools":["Figma"],"year":"SAMPLE","sort_order":4,"is_published":true}
+  ],
+  "project_images":[
+    {"id":"web-1","project_id":"sample-web","image_url":"sample-web.svg","alt_text":"Studio Archive 웹사이트의 교체용 디자인 샘플","caption":"SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.","sort_order":1},
+    {"id":"detail-1","project_id":"sample-detail","image_url":"sample-detail.svg","alt_text":"Everyday Objects 상세페이지의 교체용 디자인 샘플","caption":"SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.","sort_order":1},
+    {"id":"banner-1","project_id":"sample-banner","image_url":"sample-banner.svg","alt_text":"타이포그래피 중심의 캠페인 배너 샘플","caption":"SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.","sort_order":1},
+    {"id":"app-1","project_id":"sample-app","image_url":"sample-app.svg","alt_text":"Little Routine 모바일 앱 화면 샘플","caption":"SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.","sort_order":1}
+  ]
+}
