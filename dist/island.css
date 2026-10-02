@@ -14,3 +14,6 @@
 .building-profile{left:43%;top:35%;width:18%;height:19%}.building-banner{left:25%;top:22%;width:14%;height:15%}.building-web{left:59%;top:21%;width:18%;height:16%}.building-detail{left:27%;top:55%;width:14%;height:15%}.building-app{left:63%;top:49%;width:12%;height:22%}
 
 .playing .place.profile{left:51%;top:57%}.playing .place.banner{left:34%;top:36%}.playing .place.web{left:65%;top:36%}.playing .place.detail{left:36%;top:77%}.playing .place.app{left:71%;top:79%}.building-profile{left:43%;top:34%;width:18%;height:19%}.building-banner{left:28%;top:19%;width:12%;height:13%}.building-web{left:58%;top:15%;width:15%;height:16%}.building-detail{left:31%;top:58%;width:12%;height:15%}.building-app{left:67%;top:52%;width:10%;height:24%}
+
+/* Monochrome map, including signs and the player. */
+.playing .village{filter:grayscale(1)}
