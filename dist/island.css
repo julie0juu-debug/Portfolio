@@ -26,3 +26,5 @@
 .color-web{clip-path:polygon(62% 15%,67% 15%,67% 17%,71% 17%,72% 20%,72% 29%,61% 29%,61% 22%,62% 22%)}
 .color-detail{clip-path:polygon(33% 59%,38% 59%,39% 65%,39% 72%,32% 72%,32% 65%)}
 .color-app{clip-path:polygon(70% 49%,73% 49%,73% 54%,74% 56%,74% 74%,67% 74%,67% 56%,69% 54%,69% 51%,70% 51%)}
+
+.profile-section{margin-top:26px;padding-top:20px;border-top:1px solid #30444d33}.profile-section h4{font-size:12px;letter-spacing:1px;margin:0 0 15px}.profile-info{margin:0}.profile-info>div{display:grid;grid-template-columns:130px 1fr;gap:16px;margin:12px 0}.profile-info dt{font-size:11px;letter-spacing:.4px}.profile-info dd{margin:0;font-size:14px;overflow-wrap:anywhere}.profile-info a{color:inherit}.education-list>div{margin-bottom:18px}.education-list span{font-size:12px;opacity:.7}.education-list p{margin:5px 0;font-size:15px}.profile-section .tags{margin-bottom:0}@media(max-width:480px){.profile-info>div{grid-template-columns:95px 1fr;gap:8px}.profile-info dt{font-size:9px}.profile-info dd,.education-list p{font-size:12px}}
