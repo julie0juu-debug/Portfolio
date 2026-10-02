@@ -6,3 +6,5 @@
 
 /* Transparent hit areas cover the actual buildings, above each sign. */
 .building-hit{position:absolute;z-index:3;background:transparent;border:0;padding:0;cursor:pointer;border-radius:8px}.building-hit:hover,.building-hit:focus-visible{outline:2px dashed #fff89e;outline-offset:2px;background:#fff89e18}.building-profile{left:15%;top:13%;width:20%;height:20%}.building-web{left:65%;top:15%;width:20%;height:18%}.building-detail{left:13%;top:55%;width:16%;height:19%}.building-banner{left:43%;top:59%;width:17%;height:15%}.building-app{left:75%;top:50%;width:12%;height:25%}.playing .player{pointer-events:none}
+
+.playing #open{font-size:10px;letter-spacing:-.3px}
