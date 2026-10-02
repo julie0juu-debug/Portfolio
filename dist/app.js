@@ -14,7 +14,7 @@ if(storage.get('intro_seen',false)||reduced)hatch();else setTimeout(hatch,2300);
 const previews={profile:['gyuyeon','디자이너 소개 · 학력 · 역량'],web:['이월드','웹페이지 리디자인'],detail:['Razer Mouse','오쏘몰 이뮨 비타민'],banner:['삼성 × coyseio','콜라보 배너'],app:['골프존','앱 디자인']};
 let returningFromWork=false,reactionTimer,lastGreeting=0;
 function react(message,kind='wave'){const player=$('player');player.classList.remove('react-wave','react-happy');clearTimeout(reactionTimer);$('player-reaction').textContent=message;player.classList.add(`react-${kind}`);reactionTimer=setTimeout(()=>{player.classList.remove('react-wave','react-happy');$('player-reaction').textContent=''},1800)}
-function showPreview(cat){const box=$('building-preview'),names=previews[cat];box.innerHTML=`<strong>${cats[cat]}</strong>${names.map(n=>`<span>${escapeHtml(n)}</span>`).join('')}<small>클릭해서 이동</small>`;const p=positions[cat];box.style.left=`${Math.max(22,Math.min(78,p.x))}%`;box.style.top=`${Math.max(4,p.y-28)}%`;box.hidden=false;document.querySelectorAll('[data-cat]').forEach(b=>b.classList.toggle('preview-active',b.dataset.cat===cat))}
+function showPreview(cat){const box=$('building-preview'),names=previews[cat];box.innerHTML=names.map(n=>`<span>${escapeHtml(n)}</span>`).join('');const roof={profile:{x:51,y:33},banner:{x:34,y:18},web:{x:65,y:14},detail:{x:36,y:57},app:{x:71,y:48}}[cat];box.style.left=`${roof.x}%`;box.style.top=`${roof.y}%`;box.hidden=false;document.querySelectorAll('[data-cat]').forEach(b=>b.classList.toggle('preview-active',b.dataset.cat===cat))}
 function hidePreview(){$('building-preview').hidden=true;document.querySelectorAll('.preview-active').forEach(b=>b.classList.remove('preview-active'))}
 
 let swingAnimation;
