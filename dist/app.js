@@ -1,11 +1,9 @@
-import {canStand,nearestLand,findRoute} from './terrain.js';
 import {getProfile,getProjects,getProject,getImages} from './repository.js';
 const $=id=>document.getElementById(id), cats={profile:'PROFILE',web:'WEB REDESIGN',detail:'PRODUCT DETAIL',banner:'BANNER',app:'APP DESIGN'};
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const storage={get(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
 let state='intro',category=null,position=storage.get('character_position',{x:50,y:48}),nearest=null,target=null,sound=storage.get('sound_enabled',false),audio,hatched=false,routeVersion=0;
 position={x:Math.max(6,Math.min(94,Number(position.x)||50)),y:Math.max(8,Math.min(90,Number(position.y)||48))};
-position=nearestLand(position);
 const keys=new Set(),escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function beep(freq=660,duration=.07){if(!sound)return;try{audio??=new(window.AudioContext||window.webkitAudioContext)();audio.resume();const o=audio.createOscillator(),g=audio.createGain();o.type='square';o.frequency.value=freq;g.gain.setValueAtTime(.025,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+duration);o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+duration)}catch{}}
 function soundUI(){$('sound').setAttribute('aria-pressed',String(sound));$('sound').querySelector('span').textContent=`SOUND ${sound?'ON':'OFF'}`}
@@ -44,28 +42,15 @@ function back(){beep(440);if(state==='project')location.hash=`/category/${catego
 function open(){if(state==='intro')$('play').click();else if(state==='map'&&nearest){beep();location.hash=`/category/${nearest}`}}
 $('back').onclick=back;$('open').onclick=open;
 const positions={profile:{x:26,y:33},web:{x:75,y:33},detail:{x:21,y:74},banner:{x:51,y:74},app:{x:81,y:75}};
-document.querySelectorAll('.place').forEach(b=>b.onclick=()=>{const cat=b.dataset.cat,end=nearestLand(positions[cat]),path=findRoute(position,end);keys.clear();if(!path){target=null;$('map-hint').textContent='이곳까지 이어진 길을 찾지 못했어요. 메뉴로 열어 주세요.';return;}target={...end,cat,path};beep();if(reduced){position=end;paint();target=null;location.hash=`/category/${cat}`}});
-function paint(){const player=$('player');player.style.left=`${position.x}%`;player.style.top=`${position.y}%`;let distance=Infinity;nearest=null;Object.entries(positions).forEach(([cat,p])=>{const d=Math.hypot(position.x-p.x,position.y-p.y);if(d<distance){distance=d;nearest=cat}});if(distance>18)nearest=null;document.querySelectorAll('.place').forEach(b=>b.classList.toggle('near',b.dataset.cat===nearest));$('map-hint').textContent=nearest?`${cats[nearest]} · ENTER TO OPEN`:'방향키로 움직이거나 공간을 클릭해 보세요';storage.set('character_position',position)}
+function travelTo(cat){if(state!=='map')return;target={...positions[cat],cat};keys.clear();beep();if(reduced){position={x:target.x,y:target.y};paint();target=null;location.hash=`/category/${cat}`}}
+document.querySelectorAll('.place,.building-hit').forEach(b=>{b.onclick=()=>travelTo(b.dataset.cat);if(b.classList.contains('building-hit'))b.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')travelTo(b.dataset.cat)})});
+function paint(){const player=$('player');player.style.left=`${position.x}%`;player.style.top=`${position.y}%`;let distance=Infinity;nearest=null;Object.entries(positions).forEach(([cat,p])=>{const d=Math.hypot(position.x-p.x,position.y-p.y);if(d<distance){distance=d;nearest=cat}});if(distance>18)nearest=null;document.querySelectorAll('.place').forEach(b=>b.classList.toggle('near',b.dataset.cat===nearest));$('map-hint').textContent=nearest?`${cats[nearest]} · ENTER TO OPEN`:'방향키로 이동하거나 건물에 마우스를 올려 보세요';storage.set('character_position',position)}
 const directions={ArrowUp:'up',w:'up',W:'up',ArrowDown:'down',s:'down',S:'down',ArrowLeft:'left',a:'left',A:'left',ArrowRight:'right',d:'right',D:'right'};
 window.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;const dir=directions[e.key];if(state==='map'&&dir){e.preventDefault();keys.add(dir);target=null;}else if((e.key==='Enter'||e.key===' ')&&['map','intro'].includes(state)&&!e.target.closest('button,a')){e.preventDefault();if(!e.repeat)open()}else if(e.key==='Escape'){e.preventDefault();back()}});
 window.addEventListener('keyup',e=>keys.delete(directions[e.key]));window.addEventListener('blur',()=>keys.clear());document.addEventListener('visibilitychange',()=>keys.clear());
 document.querySelectorAll('[data-dir]').forEach(b=>{b.addEventListener('pointerdown',e=>{e.preventDefault();if(state!=='map')return;b.setPointerCapture(e.pointerId);keys.add(b.dataset.dir);target=null;beep(330,.03)});for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,()=>keys.delete(b.dataset.dir));});
-// Subdivide movement so a long frame cannot skip across a narrow river.
-function moveOnLand(dx,dy){const steps=Math.ceil(Math.max(Math.abs(dx),Math.abs(dy))/.2);let moved=false;for(let i=0;i<steps;i++){const x={x:position.x+dx/steps,y:position.y};if(canStand(x)){position=x;moved=true}const y={x:position.x,y:position.y+dy/steps};if(canStand(y)){position=y;moved=true}}return moved}
-let previous=performance.now(),lastSaved=0;
-function tick(time){const dt=Math.min((time-previous)/1000,.04);previous=time;
- if(state==='map'){
-  let dx=Number(keys.has('right'))-Number(keys.has('left')),dy=Number(keys.has('down'))-Number(keys.has('up'));
-  if(target){
-   while(target.path.length&&Math.hypot(target.path[0].x-position.x,target.path[0].y-position.y)<.18)target.path.shift();
-   if(!target.path.length){const cat=target.cat;target=null;location.hash=`/category/${cat}`;dx=dy=0;}
-   else{const next=target.path[0];dx=next.x-position.x;dy=next.y-position.y;}
-  }
-  let moved=false;
-  if(dx||dy){const length=Math.hypot(dx,dy),step=Math.min(dt*32,target?length:Infinity);moved=moveOnLand(dx/length*step,dy/length*step);$('player').style.left=`${position.x}%`;$('player').style.top=`${position.y}%`;if(time-lastSaved>110){paint();lastSaved=time}}
-  $('player').classList.toggle('walking',moved);
- }requestAnimationFrame(tick)
-}requestAnimationFrame(tick);
+let previous=performance.now(),lastSaved=0;function tick(time){const dt=Math.min((time-previous)/1000,.04);previous=time;if(state==='map'){let dx=Number(keys.has('right'))-Number(keys.has('left')),dy=Number(keys.has('down'))-Number(keys.has('up'));if(target){dx=target.x-position.x;dy=target.y-position.y;if(Math.hypot(dx,dy)<1.4){const cat=target.cat;target=null;location.hash=`/category/${cat}`;dx=dy=0;}}
+const moving=dx!==0||dy!==0;$('player').classList.toggle('walking',moving);if(moving){const length=Math.hypot(dx,dy);position.x=Math.max(6,Math.min(94,position.x+dx/length*dt*32));position.y=Math.max(10,Math.min(90,position.y+dy/length*dt*40));$('player').style.left=`${position.x}%`;$('player').style.top=`${position.y}%`;if(time-lastSaved>110){paint();lastSaved=time}}}requestAnimationFrame(tick)}requestAnimationFrame(tick);
 bindImages(document);
 
 const islandArt=$('island-art');function mapArtReady(){if(islandArt.naturalWidth)islandArt.classList.add('loaded');}islandArt.addEventListener('load',mapArtReady);islandArt.addEventListener('error',()=>{const note=islandArt.nextElementSibling;note.textContent='지도를 불러오지 못했어요. 새로고침해 주세요.';});if(islandArt.complete)mapArtReady();
