@@ -63,3 +63,8 @@ const moving=dx!==0||dy!==0;$('player').classList.toggle('walking',moving);if(mo
 bindImages(document);
 
 const islandArt=$('island-art');function mapArtReady(){if(islandArt.naturalWidth)islandArt.classList.add('loaded');}islandArt.addEventListener('load',mapArtReady);islandArt.addEventListener('error',()=>{const note=islandArt.nextElementSibling;note.textContent='지도를 불러오지 못했어요. 새로고침해 주세요.';});if(islandArt.complete)mapArtReady();
+
+// Size the shared map layer like object-fit: cover, including all hit areas.
+const mapViewport=$('map-viewport'),mapVillage=$('village');
+function fitMap(){const w=mapViewport.clientWidth,h=mapViewport.clientHeight;if(!w||!h)return;const ratio=1672/941,scale=Math.max(w/1672,h/941);mapVillage.style.width=`${1672*scale}px`;mapVillage.style.height=`${941*scale}px`;}
+new ResizeObserver(fitMap).observe(mapViewport);fitMap();
