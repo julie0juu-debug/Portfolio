@@ -66,5 +66,5 @@ const islandArt=$('island-art');function mapArtReady(){if(islandArt.naturalWidth
 
 // Size the shared map layer like object-fit: cover, including all hit areas.
 const mapViewport=$('map-viewport'),mapVillage=$('village');
-function fitMap(){const w=mapViewport.clientWidth,h=mapViewport.clientHeight;if(!w||!h)return;const ratio=1672/941,scale=Math.max(w/1672,h/941);mapVillage.style.width=`${1672*scale}px`;mapVillage.style.height=`${941*scale}px`;}
+function fitMap(){const w=mapViewport.clientWidth,h=mapViewport.clientHeight;if(!w||!h)return;if(!matchMedia('(max-width:820px)').matches){mapVillage.style.width=`${w}px`;mapVillage.style.height=`${h}px`;return;}const scale=Math.max(w/1672,h/941);mapVillage.style.width=`${1672*scale}px`;mapVillage.style.height=`${941*scale}px`;}
 new ResizeObserver(fitMap).observe(mapViewport);fitMap();
