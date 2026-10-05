@@ -56,26 +56,6 @@
       "external_url": "https://julie0juu-debug.github.io/Eworld/"
     },
     {
-      "id": "sample-detail",
-      "slug": "sample-product-detail",
-      "category": "detail",
-      "title": "Everyday Objects",
-      "summary": "일상 속 오브제의 가치를 전하는 상품 상세페이지",
-      "thumbnail_url": "sample-detail.svg",
-      "cover_url": "sample-detail.svg",
-      "overview": "제품의 특징, 소재, 사용 경험을 차례대로 소개하는 상세페이지 샘플입니다. 실제 제품 사진과 정보로 교체할 수 있습니다.",
-      "design_concept": "제품 설명의 순서와 여백을 통해 구매자가 필요한 정보를 쉽게 찾도록 구성합니다. 원본 비율을 유지한 이미지와 간결한 정보를 함께 배치합니다.",
-      "period": "샘플 · 기간 입력 예정",
-      "role": "샘플 · 비주얼 / 상세페이지 디자인",
-      "tools": [
-        "Photoshop",
-        "Figma"
-      ],
-      "year": "SAMPLE",
-      "sort_order": 2,
-      "is_published": true
-    },
-    {
       "id": "sample-banner",
       "slug": "sample-banner-collection",
       "category": "banner",
@@ -114,17 +94,39 @@
       "sort_order": 4,
       "is_published": true,
       "external_url": "https://www.figma.com/design/i27v1CzRiSi76rdwA0Foyg/?node-id=69-1183"
+    },
+    {
+      "id": "razer",
+      "slug": "razer-viper-v4-pro",
+      "category": "detail",
+      "title": "Razer Viper V4 Pro",
+      "summary": "고성능 게이밍 마우스의 특징을 표현한 상세페이지 디자인",
+      "thumbnail_url": "product-detail/razer-intro-1.png",
+      "cover_url": "product-detail/razer-intro-1.png",
+      "period": "2026.08.24 – 2026.08.26",
+      "role": "개인 상세페이지 디자인 프로젝트",
+      "tools": [],
+      "year": "PRODUCT DETAIL",
+      "sort_order": 1,
+      "is_published": true
+    },
+    {
+      "id": "orthomol",
+      "slug": "orthomol-immune",
+      "category": "detail",
+      "title": "오쏘몰 이뮨",
+      "summary": "블루와 오렌지로 제품 정보를 정리한 건강기능식품 상세페이지 디자인",
+      "thumbnail_url": "product-detail/orthomol-intro-1.png",
+      "cover_url": "product-detail/orthomol-intro-1.png",
+      "period": "2026.08.28 – 2026.09.08",
+      "role": "개인 상세페이지 디자인 프로젝트",
+      "tools": [],
+      "year": "PRODUCT DETAIL",
+      "sort_order": 2,
+      "is_published": true
     }
   ],
   "project_images": [
-    {
-      "id": "detail-1",
-      "project_id": "sample-detail",
-      "image_url": "sample-detail.svg",
-      "alt_text": "Everyday Objects 상세페이지의 교체용 디자인 샘플",
-      "caption": "SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.",
-      "sort_order": 1
-    },
     {
       "id": "banner-1",
       "project_id": "sample-banner",
