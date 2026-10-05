@@ -96,23 +96,24 @@
       "is_published": true
     },
     {
-      "id": "sample-app",
-      "slug": "sample-app-design",
+      "id": "golfzon",
+      "slug": "golfzon-app-redesign",
       "category": "app",
-      "title": "Little Routine",
-      "summary": "작은 일상의 습관을 기록하는 모바일 앱 디자인",
-      "thumbnail_url": "sample-app.svg",
-      "cover_url": "sample-app.svg",
-      "overview": "오늘의 작은 목표를 기록하고 달성하는 모바일 앱 디자인 샘플입니다. 실제 앱 프로젝트를 위한 교체 가능한 예시입니다.",
-      "design_concept": "오늘 해야 할 행동에 집중하는 간결한 화면과 명확한 상태 피드백을 제안합니다. 편안한 색상과 충분한 터치 영역으로 꾸준한 사용을 돕습니다.",
-      "period": "샘플 · 기간 입력 예정",
-      "role": "샘플 · UX 기획 / UI 디자인",
+      "title": "골프존 앱 서비스 개편",
+      "summary": "매장 탐색과 예약, 라운드 기록, 소셜 모임을 연결하는 UX/UI 리디자인",
+      "thumbnail_url": "golfzon-title.svg",
+      "cover_url": "golfzon-title.svg",
+      "overview": "스크린골프 이용 흐름에 맞춰 핵심 기능에 빠르게 접근하도록 설계한 개인 APP UX/UI 제작 프로젝트입니다.",
+      "design_concept": "홈 화면의 정보 우선순위를 정리하고 예약과 소셜 경험을 연결했습니다.",
+      "period": "2026.09.10 ~ 2026.09.28",
+      "role": "개인 APP UX/UI 제작 프로젝트",
       "tools": [
         "Figma"
       ],
-      "year": "SAMPLE",
+      "year": "APP UX/UI",
       "sort_order": 4,
-      "is_published": true
+      "is_published": true,
+      "external_url": "https://www.figma.com/design/i27v1CzRiSi76rdwA0Foyg/?node-id=69-1183"
     }
   ],
   "project_images": [
@@ -129,14 +130,6 @@
       "project_id": "sample-banner",
       "image_url": "sample-banner.svg",
       "alt_text": "타이포그래피 중심의 캠페인 배너 샘플",
-      "caption": "SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.",
-      "sort_order": 1
-    },
-    {
-      "id": "app-1",
-      "project_id": "sample-app",
-      "image_url": "sample-app.svg",
-      "alt_text": "Little Routine 모바일 앱 화면 샘플",
       "caption": "SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.",
       "sort_order": 1
     }
