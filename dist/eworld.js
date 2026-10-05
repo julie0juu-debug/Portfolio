@@ -4,7 +4,7 @@ const figma='https://www.figma.com/design/3OfFtpw1gQYICSbddFq5zV/?node-id=544-14
 root.innerHTML=`<article class="ew-case">
 <div class="project-nav"><a class="project-back" href="#/category/web">← WEB REDESIGN</a><span>GYUYEON / EWORLD</span></div>
 <header class="ew-title"><span class="ew-eyebrow">EWORLD · WEBSITE REDESIGN</span><h1>설렘을 발견하고,<br>방문으로 이어지다.</h1><p class="project-summary">이월드의 축제와 어트랙션을 발견하는 순간부터<br>방문 준비와 티켓 예매까지, 하나의 흐름으로.</p><div class="ew-links"><a href="${site}" target="_blank" rel="noopener noreferrer">사이트 보러 가기 ↗</a><a href="${figma}" target="_blank" rel="noopener noreferrer">Figma 기획 보기 ↗</a></div></header>
-<figure class="ew-cover"><img src="eworld-main.png" alt="이월드 여름 축제를 소개하는 Summer Vacation 메인 배너"><figcaption>시즌의 분위기를 전달하는 메인 비주얼</figcaption></figure>
+<figure class="ew-cover"><img src="eworld-main-v2.png" alt="이월드 여름 축제를 소개하는 Summer Vacation 메인 배너"><figcaption>시즌의 분위기를 전달하는 메인 비주얼</figcaption></figure>
 <section class="ew-intro"><h2>이월드 웹사이트 리디자인</h2><p>테마파크의 즐거운 분위기를 온라인에서도 느끼면서, 방문에 필요한 정보를 쉽게 찾을 수 있도록 구성한 개인 리디자인 프로젝트입니다. 피그마 기획과 실제 구현 화면을 함께 소개합니다.</p><div class="ew-tags"><span>웹 기획</span><span>UI 디자인</span><span>HTML · CSS · JavaScript</span><span>Figma</span></div></section>
 <section class="ew-section"><span class="ew-eyebrow">01 / BACKGROUND & GOAL</span><h2>발견에서 예매까지,<br>끊기지 않는 경험</h2><p>기획안에서는 외부 예매처로 이어지는 흐름, 테마파크 감성을 충분히 전달하지 못하는 콘텐츠, 복잡한 정보 탐색을 개선 과제로 설정했습니다.</p><div class="ew-goals">
 <div><span>01</span><h3>예매 흐름 정리</h3><p>외부로 이어지는 예매 구조</p><b>↓</b><p>방문일과 혜택을 확인하고 예매로 이어지는 흐름</p></div>
