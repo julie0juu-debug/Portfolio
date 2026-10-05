@@ -34,23 +34,27 @@
   },
   "projects": [
     {
-      "id": "sample-web",
-      "slug": "sample-web-redesign",
+      "id": "eworld",
+      "slug": "eworld-redesign",
       "category": "web",
-      "title": "Studio Archive",
-      "summary": "콘텐츠가 중심이 되는 크리에이티브 스튜디오 웹사이트",
-      "thumbnail_url": "sample-web.svg",
-      "cover_url": "sample-web.svg",
-      "overview": "스튜디오의 작업과 이야기를 명확한 탐색 구조로 전달하는 웹사이트 리디자인 샘플입니다. 실제 고객 프로젝트가 아닌 교체용 데모 콘텐츠입니다.",
-      "design_concept": "큰 타이포그래피와 절제된 색상으로 콘텐츠에 집중합니다. 프로젝트를 빠르게 훑어볼 수 있는 카드 구조와 명확한 정보 위계를 제안합니다.",
-      "period": "샘플 · 기간 입력 예정",
-      "role": "샘플 · 기획 / UI 디자인",
+      "title": "이월드 웹사이트 리디자인",
+      "summary": "축제의 설렘에서 방문 준비와 예매까지 이어지는 웹 경험",
+      "thumbnail_url": "eworld-main.png",
+      "cover_url": "eworld-main.png",
+      "overview": "테마파크의 매력을 전하고 방문에 필요한 정보를 쉽게 찾도록 구성한 이월드 웹사이트 리디자인입니다.",
+      "design_concept": "시즌 비주얼, 직관적인 바로가기, 카드형 콘텐츠를 중심으로 탐색 흐름을 정리했습니다.",
+      "period": "개인 프로젝트",
+      "role": "웹사이트 기획 · UI 디자인 · 웹 구현",
       "tools": [
-        "Figma"
+        "Figma",
+        "HTML",
+        "CSS",
+        "JavaScript"
       ],
-      "year": "SAMPLE",
+      "year": "WEB REDESIGN",
       "sort_order": 1,
-      "is_published": true
+      "is_published": true,
+      "external_url": "https://julie0juu-debug.github.io/Eworld/"
     },
     {
       "id": "sample-detail",
@@ -113,14 +117,6 @@
     }
   ],
   "project_images": [
-    {
-      "id": "web-1",
-      "project_id": "sample-web",
-      "image_url": "sample-web.svg",
-      "alt_text": "Studio Archive 웹사이트의 교체용 디자인 샘플",
-      "caption": "SAMPLE DESIGN — 실제 작업 이미지로 교체하세요.",
-      "sort_order": 1
-    },
     {
       "id": "detail-1",
       "project_id": "sample-detail",
