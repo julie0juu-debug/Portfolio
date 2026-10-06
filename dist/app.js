@@ -1,6 +1,6 @@
 import {mountImageViewer} from './image-viewer.js?v=hintfix1';
 import {renderBanner} from './banner.js?v=banner1';
-import {renderProductDetail} from './product-detail.js?v=detail1';
+import {renderProductDetail} from './product-detail.js?v=gif1';
 import {renderGolfzon} from './golfzon.js?v=nofg1';
 import {renderEworld} from './eworld.js?v=responsive3';
 import {mountCham} from './cham.js?v=cham1';
