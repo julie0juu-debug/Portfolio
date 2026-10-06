@@ -1,6 +1,6 @@
 import {renderBanner} from './banner.js?v=banner1';
 import {renderProductDetail} from './product-detail.js?v=detail1';
-import {renderGolfzon} from './golfzon.js?v=golfzon2';
+import {renderGolfzon} from './golfzon.js?v=components1';
 import {renderEworld} from './eworld.js?v=eworld2';
 import {mountCham} from './cham.js?v=cham1';
 import {getProfile,getProjects,getProject,getImages} from './repository.js?v=banner1';
