@@ -1,3 +1,5 @@
 .detail-slides{display:grid;gap:16px;margin:28px 0}.detail-slides img,.detail-result img{display:block;width:100%;height:auto;filter:none}.detail-result{max-width:800px;margin:28px auto 0}.detail-case .detail-period{font-size:12px;color:#999}.detail-case .ew-links a{border-color:var(--ew-orange)}@media(max-width:600px){.detail-slides{gap:8px}.detail-result{margin-top:20px}}
 
 .detail-result-piece{position:relative}.detail-result-piece>img:first-child{width:100%;height:auto}.detail-result-piece .detail-animation{position:absolute;display:block;object-fit:cover;margin:0;border:0;border-radius:0;max-width:none;filter:none}
+
+.detail-result-piece .detail-animation[src$="razer-122014640.gif"]{object-position:center 24%}
