@@ -1,9 +1,9 @@
 import {renderBanner} from './banner.js?v=banner1';
 import {renderProductDetail} from './product-detail.js?v=detail1';
-import {renderGolfzon} from './golfzon.js?v=components1';
-import {renderEworld} from './eworld.js?v=eworld2';
+import {renderGolfzon} from './golfzon.js?v=nofg1';
+import {renderEworld} from './eworld.js?v=nofg1';
 import {mountCham} from './cham.js?v=cham1';
-import {getProfile,getProjects,getProject,getImages} from './repository.js?v=banner1';
+import {getProfile,getProjects,getProject,getImages} from './repository.js?v=nofg1';
 const $=id=>document.getElementById(id), cats={profile:'PROFILE',web:'WEB REDESIGN',detail:'PRODUCT DETAIL',banner:'BANNER',app:'APP DESIGN',game:'GAME'};
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const storage={get(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
