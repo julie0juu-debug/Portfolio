@@ -1,7 +1,7 @@
 import {renderBanner} from './banner.js?v=banner1';
 import {renderProductDetail} from './product-detail.js?v=detail1';
 import {renderGolfzon} from './golfzon.js?v=nofg1';
-import {renderEworld} from './eworld.js?v=nofg1';
+import {renderEworld} from './eworld.js?v=pcmob1';
 import {mountCham} from './cham.js?v=cham1';
 import {getProfile,getProjects,getProject,getImages} from './repository.js?v=nofg1';
 const $=id=>document.getElementById(id), cats={profile:'PROFILE',web:'WEB REDESIGN',detail:'PRODUCT DETAIL',banner:'BANNER',app:'APP DESIGN',game:'GAME'};
