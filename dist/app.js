@@ -1,8 +1,8 @@
 import {mountImageViewer} from './image-viewer.js?v=hintfix1';
-import {renderBanner} from './banner.js?v=banner1';
+import {renderBanner} from './banner.js?v=period1';
 import {renderProductDetail} from './product-detail.js?v=gif1';
 import {renderGolfzon} from './golfzon.js?v=order2';
-import {renderEworld} from './eworld.js?v=responsive3';
+import {renderEworld} from './eworld.js?v=period1';
 import {mountCham} from './cham.js?v=cham1';
 import {getProfile,getProjects,getProject,getImages} from './repository.js?v=nofg1';
 const $=id=>document.getElementById(id), cats={profile:'PROFILE',web:'WEB REDESIGN',detail:'PRODUCT DETAIL',banner:'BANNER',app:'APP DESIGN',game:'GAME'};
