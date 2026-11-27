@@ -115,6 +115,18 @@
       "year": "BANNER / CARD NEWS",
       "sort_order": 1,
       "is_published": true
+    },
+    {
+      "id": "shortform",
+      "slug": "shortform",
+      "category": "banner",
+      "title": "ShortForm",
+      "summary": "듀오링고 캐릭터를 소재로 제작한 세로형 숏폼 영상",
+      "thumbnail_url": "shortform/thumbnail.jpg",
+      "cover_url": "shortform/poster.jpg",
+      "year": "SHORTFORM / VIDEO",
+      "sort_order": 2,
+      "is_published": true
     }
   ],
   "project_images": []
